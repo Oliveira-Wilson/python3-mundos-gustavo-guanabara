@@ -1,13 +1,11 @@
-# Entrada do usuário
-largura = float(input('Qual a largura da parede em metros? '))
-altura = float(input('Qual a altura da parede em metros? '))
+lar = float(input('Digite a largura da parede (em metros): '))
+alt = float(input('Digite a altura da parede (em metros): '))
 
-# Cálculo da área da parede
-area_parede = largura * altura
+# Calcula a área total da parede
+area = lar * alt
 
-# Cálculo da quantidade de tinta necessária (assumindo que 1 litro cobre 2 m²)
-quantidade_tinta = area_parede / 2
+# Calcula a quantidade de tinta necessária (1 litro para cada 2 metros quadrados)
+litros_tinta = area / 2
 
-# Impressão dos resultados
-
-print(f'Sua parede tem a dimenção de {largura}x{altura} e sua aréa é de {area_parede:2}m².\nPara pintar essa parede, você vai precisar de {quantidade_tinta}L de tinta ')
+# Exibe o resultado formatado com 2 casas decimais
+print(f'A parede tem a área total de {area:.2f}m².\nPrecisa-se de {litros_tinta:.2f} litros de tinta para pintar essa parede.')
