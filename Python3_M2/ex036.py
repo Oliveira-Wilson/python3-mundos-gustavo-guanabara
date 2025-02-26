@@ -1,11 +1,14 @@
-imovel = float(input('Digite o valor do imovél R$'))
-salario = float(input('Digite o o seu salário R$ '))
-anos = int(input('Digite em quantos anos será o seu finaciamento '))
-prestacao = imovel / (anos * 12)
-minimo = salario * 30 /100
-print(f'Para pagar um casa de R${imovel:.2f} em {anos} a prestação será de R${prestacao:.2f} ')
-if prestacao <= minimo:
-    print('EMPRESTIMO pode ser CONCEDIDO')
+# Programa de empréstimo bancário para compra de imóvel
+preço_imovel = float(input('Valor do imóvel: R$'))
+salario = float(input('Salário do comprador: R$'))
+anos = int(input('Anos de financiamento: '))
+
+parcelas_mensais = preço_imovel / (anos * 12)
+limite_parcela = salario * 0.3  # 30% do salário
+
+print(f'Para pagar uma casa de R${preço_imovel:.2f}, em {anos} anos, a parcela será de R${parcelas_mensais:.2f} mensais.')
+
+if parcelas_mensais <= limite_parcela:
+    print('Seu financiamento foi APROVADO!!!')
 else:
-    print('Emprestimo NEGADO!')
-    
+    print('Seu financiamento foi NEGADO!!')
